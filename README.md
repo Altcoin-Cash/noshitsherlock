@@ -1,8 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# No Shit Sherlock!
+
+Contracts:
+Ethereum Mainnet: [0x55af491e8b33246606FeB9010156D2597e15cAa1](https://etherscan.io/token/0x55af491e8b33246606FeB9010156D2597e15cAa1)
+Sepolia Testnet: [0x0Ecbe0484E99bBA9175309ae66C5690557A942D1](https://sepolia.etherscan.io/address/0x0Ecbe0484E99bBA9175309ae66C5690557A942D1)
 
 ## Getting Started
 
-First, run the development server:
+Install:
+
+```bash
+npm i
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -15,6 +25,8 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 

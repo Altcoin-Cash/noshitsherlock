@@ -230,6 +230,33 @@ const HomePage = () => {
         >
           <div style={{ display: "flex", justifyContent: "center" }}>
             <a
+              href="https://dexscreener.com/ethereum/0xa097b0f2a83e201edfd6a0ea5c02ce553101e5af"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                marginLeft: "10px",
+                marginRight: "10px",
+                marginTop: "15px",
+                color: "#FFFFFF",
+              }}
+            >
+              DexScreener
+            </a>
+            <a
+              href="https://app.uniswap.org/#/swap?outputCurrency=0x55af491e8b33246606feb9010156d2597e15caa1"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                marginLeft: "10px",
+                marginRight: "10px",
+                marginTop: "15px",
+                color: "#FFFFFF",
+              }}
+            >
+              $NSS Uniswap
+            </a>
+
+            <a
               href="https://github.com/Altcoin-Cash/noshitsherlock"
               target="_blank"
               rel="noopener noreferrer"
@@ -239,6 +266,7 @@ const HomePage = () => {
                 alt="GitHub"
                 style={{
                   marginTop: "5px",
+                  marginLeft: "20px",
                   marginRight: "20px",
                   maxWidth: "50px",
                 }}

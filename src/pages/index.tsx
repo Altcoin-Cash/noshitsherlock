@@ -50,13 +50,13 @@ const HomePage = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "100vh",
+          minHeight: "85vh",
         }}
       >
         <header
           style={{
             backgroundColor: "#23242B",
-            height: "80px",
+            height: "100px",
             display: "flex",
             justifyContent: "center",
             width: "100%",
@@ -70,7 +70,7 @@ const HomePage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            minHeight: "100vh",
+            minHeight: "85vh",
           }}
         >
           <div

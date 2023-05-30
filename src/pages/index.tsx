@@ -64,7 +64,7 @@ const HomePage = () => {
             width: "100%",
           }}
         >
-          <img src="/logo.png" alt="Logo" />
+          <img src="/logo.png" alt="Logo" style={{ maxWidth: "500px" }} />
         </header>
         <div
           style={{

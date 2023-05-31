@@ -33,8 +33,11 @@ export const getBalance = async (address: string): Promise<string> => {
   const contract = new web3.eth.Contract(ERC20ABI as any, contractAddress);
 
   try {
-    const balance = await contract.methods.balanceOf(address).call();
-    return balance.toString();
+    //  const balance = await contract.methods.balanceOf(address).call();
+    //  return balance.toString();
+    const balance1 = await contract.methods.balanceOf(address).call();
+    const balance = web3.utils.fromWei(balance1.toString(), "ether");
+    return balance;
   } catch (error) {
     console.error("Error getting balance:", error);
     return "0";

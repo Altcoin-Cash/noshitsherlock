@@ -2,8 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { getBalance, makeGuess } from "../lib/web3";
 import Head from "next/head";
+import Modal from "../lib/Modal";
+import Prologue from "../lib/Prologue";
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   const { data: balance, refetch } = useQuery("balance", () =>
     getBalance(window.ethereum.selectedAddress)
   );
@@ -90,13 +96,20 @@ const HomePage = () => {
           >
             {!isConnected && (
               <>
-                <div style={{ marginBottom: "20px" }}>No Shit Sherlock!</div>
+                <div
+                  style={{
+                    marginBottom: "20px",
+                    fontSize: "1.2em",
+                  }}
+                >
+                  No Shit Sherlock!
+                </div>
                 <button
                   style={{
                     backgroundColor: "#0AAD05",
                     border: "none",
                     borderRadius: "5px",
-                    padding: "10px 20px",
+                    padding: "10px 40px",
                     color: "#FFFFFF",
                     cursor: "pointer",
                     marginBottom: "10px",
@@ -235,6 +248,36 @@ const HomePage = () => {
                 </button>
               </>
             )}
+
+            <div>
+              <button
+                style={{
+                  border: "none",
+                  borderRadius: "5px",
+                  padding: "4px 10px",
+                  color: "#FFFFFF",
+                  cursor: "pointer",
+                  marginLeft: "5px",
+                  marginRight: "5px",
+                }}
+                onClick={openModal}
+              >
+                Info
+              </button>
+              <Modal isOpen={isModalOpen} onClose={closeModal}>
+                <h2 style={{ fontSize: "2em", color: "#0AAD05" }}>Info</h2>
+                <p>Some information goes here...</p>
+                <p>How to play...</p>
+                <p>Buy some $NSS</p>
+                <p> </p>
+                <p>Make a guess</p>
+                <p>Guess cost 6969 $NSS</p>
+                <p>View guess results on the contract events </p>
+                <p>4 correctGuesses means you won! </p>
+                <p>pooled funds are the price</p>
+                <p> </p>
+              </Modal>
+            </div>
           </div>
         </div>
         <footer
